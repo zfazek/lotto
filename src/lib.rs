@@ -17,8 +17,11 @@ pub fn generate_numbers(n: usize, limit: usize, name: &str) -> String {
         numbers.insert(secret_number);
     }
     let mut str = String::from(name.to_string() + "[");
-    for (i, n) in numbers.iter().enumerate() {
-        str += &n.to_string();
+    for (i, number) in numbers.iter().enumerate() {
+        if number < &10 {
+            str += " ";
+        }
+        str += &number.to_string();
         if i < numbers.len() - 1 {
             str += ", ";
         }
