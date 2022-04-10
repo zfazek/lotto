@@ -6,7 +6,7 @@ function main() {
     let numbers6 = generate_numbers(6, 45, "Hatos lotto: ");
     let numbers7 = generate_numbers(7, 35, "Hetes lotto: ");
     let euro5 = generate_numbers(5, 50, "Euro  lotto: ");
-    let euro2 = generate_numbers(2, 10, ", ");
+    let euro2 = generate_numbers(2, 12, ", ");
     let result = numbers5.concat("\n", numbers6, "\n", numbers7, "\n", euro5, euro2);
     document.getElementById("result").innerHTML = result;
 }
