@@ -8,15 +8,14 @@ function main() {
     let euro5 = generate_numbers(5, 50, "Euro  lotto: ");
     let euro2 = generate_numbers(2, 12, ", ");
     let result = numbers5.concat("\n", numbers6, "\n", numbers7, "\n", euro5, euro2);
-    document.getElementById("result").innerHTML = result;
+    document.getElementById("result").textContent = result;
 }
 
 async function run() {
     await init();
+    document.getElementById("ujra").addEventListener("click", main);
     main();
 }
-
-window.main = main;
 
 run();
 
